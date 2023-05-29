@@ -9,6 +9,7 @@ import wifi from "../assets/wifi.png";
 import masterCard2 from "../assets/mastercard-2.svg";
 import apple from "../assets/apple-13.svg";
 import closeBtn from "../assets/close.svg";
+import docket from "../assets/docket.png";
 
 function Modal() {
 
@@ -33,9 +34,7 @@ function Modal() {
             <div className="form-section">
               <header>
                 <div className="logo">
-                  <div>
-                    {/* icon */}
-                  </div>
+                  <div className="logoBag"></div>
                   <h2>AceCoin<span>Pay</span></h2>
                 </div>
                 <div className="time">
@@ -164,7 +163,16 @@ function Modal() {
                   <div className="right"></div>
                 </div>
 
-                <div className="purchase-total"></div>
+                <div className="purchase-total">
+                  <div className="total">
+                    <p className="desc">You have to Pay</p>
+                    <p className="t-amount">
+                      <h1 className='amount'>549 <sub>.99</sub></h1>
+                      <p className='symbol'>USD</p>
+                    </p>
+                  </div>
+                  <img src={ docket } width="30" alt="docket icon" />
+                </div>
               </div>
             </div>
           </div>
