@@ -34,10 +34,13 @@
   right: 0;
   bottom: 0;
   position: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .overlay {
-  /* background: rgba(49, 49, 49, 0.8); */
   background-image: url("../assets/bg.jpg");
   background-position: left;
   background-repeat: no-repeat;
@@ -54,14 +57,12 @@
 
 .modal-content {
   display: flex;
-  justify-content: center;
-  /* align-items: center; */
+  justify-content: space-around;
+  align-items: center;
   position: relative;
   background: #fff;
-  max-width: 1000px;
-  min-width: 1000px;
-  height: 600px;
-  margin: 70px auto;
+  max-width: 1050px;
+  height: 580px;
   padding: 50px 0;
 }
 
@@ -90,8 +91,9 @@
 }
 
 .form-section {
-  flex-basis: 62%;
-  padding: 0 20px 20px 0;
+  flex-basis: 60%;
+  width: 60%;
+  padding-left: 10px;
 }
 
 header {
@@ -256,10 +258,17 @@ header {
   margin: 10px 0 20px;
 }
 
+.inputBox input {
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: none;
+  color: #000;
+}
+
 .inputBox input:focus {
   background: #edf3ff;
 }
-
 
 .paymentBtn {
   padding: 15px 50px;
@@ -270,7 +279,7 @@ header {
   background-color: #035fff;
   color: #fff;
   cursor: pointer;
-  margin: 10px 0 20px;
+  margin: 10px 0;
   font-weight: 500;
 }
 
@@ -281,8 +290,11 @@ header {
 .fee-section {
   border-radius: 10px;
   position: relative;
+  flex-basis: 30%;
   width: 30%;
-  height: 105%;
+  height: 100%;
+  height: 500px;
+  padding-right: 10px;
 }
 
 .blue {
@@ -292,7 +304,8 @@ header {
   background-color: #035fff;
   position: absolute;
   top: -7px;
-  left: 140px;
+  left: 130px;
+  padding: 0 auto;
   transform: translate(-50%, 0);
 }
 
@@ -308,7 +321,7 @@ header {
   z-index: 99;
   transform: translate(-50%, 0);
   backdrop-filter: blur(15px);
-  box-shadow: 0px 4px 14px 2px rgb(142, 142, 142 / 15%);
+  box-shadow: 0 1px 15px 0 #f1f1f1;
 }
 
 .cardHead {
@@ -322,12 +335,12 @@ header {
 .cardBody {
   position: relative;
   color: #05365c;
+  margin-bottom: 5px;
 }
 
 .cardBody p {
   font-weight: 500;
   font-size: 13px;
-  margin-bottom: 5px;
 }
 
 .digits {
@@ -367,7 +380,7 @@ header {
 
 .checkoutDetails {
   background-color: #f0f3f8;
-  height: 82%;
+  height: 81%;
   width: 100%;
   position: absolute;
   border-radius: 10px;
@@ -376,11 +389,12 @@ header {
 
 .checkoutDetails .divider {
   position: absolute;
-  bottom: 85px;
+  bottom: 70px;
   border: 1px dashed #d3d3d3;
   width: 100%;
   display: flex;
   align-items: center;
+  margin: 1px 0 5px;
 }
 
 .divider .left, .divider .right {
@@ -389,7 +403,6 @@ header {
   width: 30px;
   border-radius: 50%;
   background-color: #fff;
-  /* bottom: -15px; */
 }
 
 .left {
@@ -402,7 +415,7 @@ header {
 
 .purchase-data {
   position: relative;
-  top: 200px;
+  top: 195px;
   padding: 10px;
 }
 
@@ -436,7 +449,7 @@ header {
   position: absolute;
   bottom: -10px;
   width: 100%;
-  padding: 10px 20px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -444,7 +457,7 @@ header {
 
 .total .desc {
   color: #8e96a3;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
 }
 
@@ -475,4 +488,67 @@ sub {
   margin-left: 3px;
 }
 
+@media only screen and (max-width: 1024px){
+  .modal, .overlay {
+    padding: 0 10px;
+  }
 
+  .modal_content {
+    width: 80%;
+    padding: 5px;
+  }
+
+  .blue {
+    left: 130px;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .blue {
+    left: 115px;
+  }
+}
+
+@media only screen and (max-width: 789px) {
+
+  .form-section {
+    flex-basis: 57%;
+  }
+
+  .fee-section {
+    flex-basis: 35%;
+  }
+
+  .row, .expiryDate {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+
+  .rowInputBox, .passwordInputBox, .inputBox {
+    width: 100%;
+  }
+
+ .modal-content {
+    height: 700px;
+  }
+
+  .purchase-data {
+    top: 200px;
+  }
+
+  .purchase-data .data {
+    margin-bottom: 10px;
+  }
+
+  .checkoutDetails .divider {
+    bottom: 70px;
+  }
+
+}
+
+@media only screen and (max-width: 700px) {
+  .modal-content{
+    display: none;
+  }
+}
