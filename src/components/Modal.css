@@ -1,0 +1,429 @@
+.title1 {
+  text-align: center;
+  margin: 100px auto 0;
+}
+
+.title span {
+  color: red;
+  font-size: 25px;
+}
+
+.openModalBtn {
+  padding: 15px;
+  display: block;
+  margin: 20px auto 0;
+  font-size: 20px;
+  color: #fff;
+  background-color: green;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.openModalBtn:hover {
+  background: transparent;
+  color: green;
+  border: 1px solid green
+}
+
+.modal, .overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.overlay {
+  /* background: rgba(49, 49, 49, 0.8); */
+  background-image: url("../assets/bg.jpg");
+  background-position: center, center;
+}
+
+.closeModal {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+}
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  position: relative;
+  background: #fff;
+  max-width: 70%;
+  min-width: 400px;
+  height: 600px;
+  margin: 60px auto;
+  padding: 50px 0;
+}
+
+.logo h2 {
+  font-weight: 600;
+  color: #05365c;
+  font-size: 22px;
+}
+
+.logo h2 span {
+  font-weight: 300;
+}
+
+.form-section {
+  flex-basis: 62%;
+  padding: 0 20px 20px 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 25px;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+}
+
+.time button {
+  padding: 6px;
+  border-radius: 3px;
+  background: #17254c;
+  color: #fff;
+  border: none;
+  cursor: none;
+  outline: none;
+  margin: 0 1px;
+}
+
+.cardNumber, .row, .expiryDate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardNumber .blueText {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.blueText h5 {
+  color: #035fff;
+}
+
+.blueText h5 {
+  margin-left: 8px;
+}
+
+.cardNumber h3, .row h3, .expiryDate h3 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 15px;
+  color: #05365c;
+}
+
+.cardNumber p, .row p, .expiryDate p {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #8e96a3;
+}
+
+.cardInputContainer {
+  position: relative;
+}
+
+.cardInputContainer img {
+  position: absolute;
+}
+
+.masterCardIcon {
+  left: 8px;
+  top: 45%;
+  transform: translate(0 , -50%);
+}
+
+.verifiedIcon {
+  right: 8px;
+  top: 45%;
+  transform: translate(0 , -50%);
+}
+
+.cardInput {
+  padding: 15px 45px;
+  width: 100%;
+  border-radius: 6px;
+  outline-color: #0077b6;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  margin: 10px 0 20px;
+  background: linear-gradient(45deg, #f8faf9, transparent);
+}
+
+.cardInput::placeholder {
+  opacity: .5;
+  font-weight: 400;
+}
+
+.rowInputBox, .passwordInputBox {
+  width: 50%;
+  position: relative;
+}
+
+.dotsIcon {
+  position: absolute;
+  right: 8px;
+  top: 45%;
+  transform: translate(0 , -50%);
+  opacity: .35;
+}
+
+.rowInput, .passwordInput {
+  padding: 15px 30px;
+  width: 100%;
+  border-radius: 6px;
+  outline-color: #0077b6;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  margin: 10px 0 20px;
+}
+
+.rowInputBox input {
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: none;
+  color: #035fff;
+}
+
+.passwordInputBox input {
+  text-align: left;
+  background-color: none;
+  letter-spacing: 2px;
+}
+
+.rowInputBox input:focus {
+  background: #edf3ff;
+}
+
+.expiryDate > h3 {
+  margin: 0 5px;
+}
+
+.inputBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 50%;
+}
+
+.inputBox h3 {
+  margin: 0 10px;
+  font-weight: bolder;
+  color: #111;
+}
+
+.dateInput {
+  padding: 15px 50px;
+  width: 100%;
+  border-radius: 6px;
+  outline-color: #0077b6;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  font-weight: 500;
+  margin: 10px 0 20px;
+}
+
+.inputBox input:focus {
+  background: #edf3ff;
+}
+
+
+.paymentBtn {
+  padding: 15px 50px;
+  width: 100%;
+  border-radius: 6px;
+  border: none;
+  font-size: 17px;
+  background-color: #035fff;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px 0 20px;
+  font-weight: 500;
+}
+
+.paymentBtn:hover {
+  background-color: #0645b3;
+}
+
+.fee-section {
+  border-radius: 10px;
+  position: relative;
+  width: 30%;
+  height: 100%;
+}
+
+.blue {
+  display: block;
+  height: 25px;
+  width: 50px;
+  background-color: #035fff;
+  position: absolute;
+  top: -7px;
+  left: 140px;
+  transform: translate(-50%, 0);
+}
+
+.creditCard {
+  width: 200px;
+  height: 280px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), #fff);
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  left: 50%;
+  overflow: hidden;
+  z-index: 99;
+  transform: translate(-50%, 0);
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 4px 14px 2px rgb(142, 142, 142 / 15%);
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 85px;
+}
+
+.cardBody {
+  position: relative;
+  color: #05365c;
+}
+
+.cardBody p {
+  font-weight: 500;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.digits {
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.digits .circles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circles .circle {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #17254c;
+  margin-right: 4px;
+}
+
+.digits .actual-digits {
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 35px;
+}
+
+.checkoutDetails {
+  background-color: #f0f3f8;
+  height: 82%;
+  width: 100%;
+  position: absolute;
+  border-radius: 10px;
+  bottom: 0;
+}
+
+.checkoutDetails .divider {
+  position: absolute;
+  bottom: 50px;
+  border: 1px dashed #d3d3d3;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.divider .left, .divider .right {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  bottom: -15px;
+}
+
+.left {
+  left: -15px;
+}
+
+.right {
+  right: -15px;
+}
+
+.divider .left::before, .divider .right::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  
+}
+
+.purchase-data {
+  position: relative;
+  top: 210px;
+  padding: 10px;
+}
+
+.purchase-data .data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #8e96a3;
+  margin-bottom: 10px;
+}
+
+.data .title {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.data .value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.value .inner-text {
+  color: #05365c;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+
