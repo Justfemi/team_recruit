@@ -491,11 +491,12 @@ sub {
 @media only screen and (max-width: 1024px){
   .modal, .overlay {
     padding: 0 10px;
+    height: 800px;
   }
 
   .modal_content {
     width: 80%;
-    padding: 5px;
+    padding: 10px;
   }
 
   .blue {
@@ -530,7 +531,7 @@ sub {
   }
 
  .modal-content {
-    height: 700px;
+    height: 650px;
   }
 
   .purchase-data {
@@ -547,8 +548,32 @@ sub {
 
 }
 
-@media only screen and (max-width: 700px) {
-  .modal-content{
-    display: none;
+@media only screen and (max-width: 600px) {
+  .modal, .overlay {
+    overflow: scroll;
+    height: 1500px;
+  }
+
+  .modal-content {
+    flex-direction: column;
+    height: 1250px;
+    margin: 50px auto;
+    padding: 50px 20px;
+  }
+
+  .form-section {
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .fee-section {
+    flex-basis: 100%;
+    width: 300px;
+    height: 600px;
+    margin-top: 30px;
+  }
+
+  .blue {
+    left: 150px;
   }
 }
