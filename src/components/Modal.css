@@ -44,6 +44,7 @@
   background-image: url("../assets/bg.jpg");
   background-position: left;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .closeModal {
@@ -489,10 +490,20 @@ sub {
 }
 
 @media only screen and (max-width: 1024px){
-  .modal, .overlay {
+  .modal {
     padding: 0 10px;
     height: 800px;
   }
+
+  .overlay {
+    padding: 0 10px;
+  }
+
+  /* background-image: url("../assets/bg.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
 
   .modal_content {
     width: 80%;
@@ -531,7 +542,7 @@ sub {
   }
 
  .modal-content {
-    height: 650px;
+    height: 700px;
   }
 
   .purchase-data {
@@ -548,17 +559,27 @@ sub {
 
 }
 
-@media only screen and (max-width: 600px) {
-  .modal, .overlay {
-    overflow: scroll;
+@media only screen and (max-width: 600px) {  
+  .modal {
+    overflow-y: scroll;
     height: 1500px;
+    width: 100%;
+  }
+
+  .overlay {
+    overflow-y: scroll;
+    height: 1500px;
+    /* width: 100%; */
   }
 
   .modal-content {
     flex-direction: column;
-    height: 1250px;
+    height: 1330px;
     margin: 50px auto;
     padding: 50px 20px;
+    position: relative;
+    /* overflow-y: scroll;
+    width: 100%; */
   }
 
   .form-section {
